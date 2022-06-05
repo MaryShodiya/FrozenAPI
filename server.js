@@ -87,6 +87,6 @@ app.get('/api/:character', (request, response) => {
    }
 })
 
-app.listen(PORT, ()=>{
+app.listen(process.env.PORT || PORT, ()=>{
  console.log(`listening on port ${PORT}`)
 })

@@ -2,7 +2,10 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const multer = require('multer')
-const uploadImages = multer({dest:'uploads/'})
+const uploadImages = multer({
+  dest:'uploads/',
+  type: 'multipart/form-data',
+})
 const  PORT = 8000
 
 
@@ -286,6 +289,9 @@ const storage = multer.diskStorage({
   },
   filename: function (request, file, callback) {
     callback(null, file.originalname)
+  },
+  type: function (request, file, callback) {
+    callback(null, 'multipart/form-data')
   }
 })
 

@@ -15,7 +15,7 @@ app.use(express.static('public'))
 const frozen = {
 "elsa": {
     "name": "Elsa of Arendelle",
-    "image": "elsa.png",
+    "image": "images/elsa.png",
     "voiced" : "Idina Menzel",
       "age": "24 years",
       "birthdate": "Winter Solstice (December 21–22)",
@@ -29,7 +29,7 @@ const frozen = {
 
 "olaf": {
     "name": "Olaf",
-    "image": "olaf.png",
+    "image": "images/olaf.png",
     "voiced" : "Josh Gad",
       "age": "3 years",
       "birthdate": "Winter Solstice (December 16)",
@@ -42,7 +42,7 @@ const frozen = {
 },
 "anna": {
   "name": "Anna of Arendelle",
-  "image": "anna.png",
+  "image": "images/anna.png",
   "voiced" : "Kristen Bell",
     "age": "21 years",
     "birthdate": "Summer Solstice (June 20–21)",
@@ -56,7 +56,7 @@ const frozen = {
 
 "hans": {
   "name": "Hans Westergaard",
-  "image": "hans.png",
+  "image": "images/hans.png",
   "voiced" : "Santino Fontana",
     "age": "23 years",
     "birthdate": "unknown",
@@ -70,7 +70,7 @@ const frozen = {
 
 "kristoff": {
     "name": "Kristoff Bjorgman",
-    "image": "kristoff.png",
+    "image": "images/kristoff.png",
     "voiced" : "Jonathan Groff",
       "age": "24 years",
       "birthdate": "Summer Solstice (June 20–21)",
@@ -83,7 +83,7 @@ const frozen = {
 },
 "sven": {
     "name": "Mr Cranky Caribou",
-    "image": "sven.png",
+    "image": "images/sven.png",
     "voiced" : "Jonathan Groff",
       "age": "21 years",
       "birthdate": "Unknown",
@@ -97,7 +97,7 @@ const frozen = {
 
 "iduna": {
   "name": "Queen Iduna of Arendelle",
-  "image": "queeniduna.png",
+  "image": "images/queeniduna.png",
   "voiced" : "Jennifer Lee",
     "age": "30 years",
     "birthdate": "Unknown",
@@ -111,7 +111,7 @@ const frozen = {
 
 "duke": {
   "name": "Duke of Weselton",
-  "image": "duke.png",
+  "image": "images/duke.png",
   "voiced" : "Alan Tudyk",
     "age": "51 years",
     "birthdate": "Unknown",
@@ -125,7 +125,7 @@ const frozen = {
 
 "agnarr": {
   "name": "King Agnarr",
-  "image": "agnarr.jpeg", 
+  "image": "images/agnarr.jpeg", 
   "voiced" : "Maurice LeMarche",
     "age": "42 years",
     "birthdate": "Unknown",
@@ -139,7 +139,7 @@ const frozen = {
 
 "runenard": {
   "name": "King Runenard ",
-  "image": "runenard.png",
+  "image": "images/runenard.png",
   "voiced" : "Jeremy Sisto",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -153,7 +153,7 @@ const frozen = {
 
 "dignitaries": {
   "name": ["Spanish Dignitary", "French Dignitary", "German Dignitary", "Irish Dignitary"],
-  "image": "dignitaries.png",
+  "image": "images/dignitaries.png",
   "voiced" : ["Jessie Korti", "Jessie Marcus", "Tucker Gilmore"],
     "age": "unknown",
     "birthdate": "Unknown",
@@ -167,7 +167,7 @@ const frozen = {
 
 "bulda": {
   "name": "Bulda",
-  "image": "bulda.png",
+  "image": "images/bulda.png",
   "voiced" : "Maia Wilson",
     "age": "700 years",
     "birthdate": "Unknown",
@@ -181,7 +181,7 @@ const frozen = {
 
 "pabbie": {
   "name": "Grand Pabbie",
-  "image": "pabbie.png",
+  "image": "images/pabbie.png",
   "voiced" : "Ciaran Hinds",
     "age": " Over 700 years",
     "birthdate": "Unknown",
@@ -195,7 +195,7 @@ const frozen = {
 
 "gerda": {
   "name": "Gerda",
-  "image": "gerda.png",
+  "image": "images/gerda.png",
   "voiced" : "Edie McClurg",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -209,7 +209,7 @@ const frozen = {
 
 "kai": {
   "name": "Kai",
-  "image": "kai.png",
+  "image": "images/kai.png",
   "voiced" : "Stephen John Anderson",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -223,7 +223,7 @@ const frozen = {
 
 "oaken": {
   "name": "Mr Wandering Oaken",
-  "image": "oaken.png",
+  "image": "../images/oaken.png", 
   "voiced" : "Chris Williams",
     "age": "",
     "birthdate": "Unknown",
@@ -237,7 +237,7 @@ const frozen = {
 
 "marshmallow": {
   "name": "Marshmallow",
-  "image": "marshmallow.png",
+  "image": "../images/marshmallow.png",
   "voiced" : "Paul Briggs",
     "age": "",
     "birthdate": "Unknown",
@@ -250,7 +250,7 @@ const frozen = {
 },
 "cliff": {
   "name": "Cliff",
-  "image": "cliff.jpeg",
+  "image": "images/cliff.jpeg",
   "voiced" : "Lewis Cleale",
     "age": "unknown",
     "birthdate": "unknown",
@@ -305,6 +305,8 @@ app.get('/api/:character', (request, response) => {
        response.json(frozen['unknown'])
    }
 })
+
+
 
 /*app.post('/', uploadImages.single('file'), (request, response) => {
   if(!request.file){

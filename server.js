@@ -1,24 +1,21 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const multer = require('multer')
-const uploadImages = multer({
-  dest:'uploads/',
-  type: 'multipart/form-data',
-})
+//const multer = require('multer')
+//const uploadImages = multer({dest:'uploads/'})
 const  PORT = 8000
 
 
 app.use(cors())
-app.use('/uploads', express.static('uploads'))
+app.use('/images', express.static('images'))
 app.use(express.static('public'))
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
+//app.use(express.urlencoded({ extended: true }))
+//app.use(express.json())
 
 const frozen = {
 "elsa": {
     "name": "Elsa of Arendelle",
-    "image": "/uploads/elsa.png",
+    "image": "elsa.png",
     "voiced" : "Idina Menzel",
       "age": "24 years",
       "birthdate": "Winter Solstice (December 21–22)",
@@ -32,7 +29,7 @@ const frozen = {
 
 "olaf": {
     "name": "Olaf",
-    "image": "/uploads/olaf.png",
+    "image": "olaf.png",
     "voiced" : "Josh Gad",
       "age": "3 years",
       "birthdate": "Winter Solstice (December 16)",
@@ -45,7 +42,7 @@ const frozen = {
 },
 "anna": {
   "name": "Anna of Arendelle",
-  "image": "/uploads/anna.png",
+  "image": "anna.png",
   "voiced" : "Kristen Bell",
     "age": "21 years",
     "birthdate": "Summer Solstice (June 20–21)",
@@ -59,7 +56,7 @@ const frozen = {
 
 "hans": {
   "name": "Hans Westergaard",
-  "image": "/uploads/hans.png",
+  "image": "hans.png",
   "voiced" : "Santino Fontana",
     "age": "23 years",
     "birthdate": "unknown",
@@ -73,7 +70,7 @@ const frozen = {
 
 "kristoff": {
     "name": "Kristoff Bjorgman",
-    "image": "/uploads/kristoff.png",
+    "image": "kristoff.png",
     "voiced" : "Jonathan Groff",
       "age": "24 years",
       "birthdate": "Summer Solstice (June 20–21)",
@@ -86,7 +83,7 @@ const frozen = {
 },
 "sven": {
     "name": "Mr Cranky Caribou",
-    "image": "/uploads/sven.png",
+    "image": "sven.png",
     "voiced" : "Jonathan Groff",
       "age": "21 years",
       "birthdate": "Unknown",
@@ -100,7 +97,7 @@ const frozen = {
 
 "iduna": {
   "name": "Queen Iduna of Arendelle",
-  "image": "/uploads/queeniduna.png",
+  "image": "queeniduna.png",
   "voiced" : "Jennifer Lee",
     "age": "30 years",
     "birthdate": "Unknown",
@@ -114,7 +111,7 @@ const frozen = {
 
 "duke": {
   "name": "Duke of Weselton",
-  "image": "/uploads/duke.png",
+  "image": "duke.png",
   "voiced" : "Alan Tudyk",
     "age": "51 years",
     "birthdate": "Unknown",
@@ -128,7 +125,7 @@ const frozen = {
 
 "agnarr": {
   "name": "King Agnarr",
-  "image": "/uploads/agnarr.jpeg",
+  "image": "agnarr.jpeg", 
   "voiced" : "Maurice LeMarche",
     "age": "42 years",
     "birthdate": "Unknown",
@@ -142,7 +139,7 @@ const frozen = {
 
 "runenard": {
   "name": "King Runenard ",
-  "image": "/uploads/runenard.png",
+  "image": "runenard.png",
   "voiced" : "Jeremy Sisto",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -156,7 +153,7 @@ const frozen = {
 
 "dignitaries": {
   "name": ["Spanish Dignitary", "French Dignitary", "German Dignitary", "Irish Dignitary"],
-  "image": "/uploads/dignitaries.png",
+  "image": "dignitaries.png",
   "voiced" : ["Jessie Korti", "Jessie Marcus", "Tucker Gilmore"],
     "age": "unknown",
     "birthdate": "Unknown",
@@ -170,7 +167,7 @@ const frozen = {
 
 "bulda": {
   "name": "Bulda",
-  "image": "/uploads/bulda.png",
+  "image": "bulda.png",
   "voiced" : "Maia Wilson",
     "age": "700 years",
     "birthdate": "Unknown",
@@ -184,7 +181,7 @@ const frozen = {
 
 "pabbie": {
   "name": "Grand Pabbie",
-  "image": "/uploads/pabbie.png",
+  "image": "pabbie.png",
   "voiced" : "Ciaran Hinds",
     "age": " Over 700 years",
     "birthdate": "Unknown",
@@ -198,7 +195,7 @@ const frozen = {
 
 "gerda": {
   "name": "Gerda",
-  "image": "/uploads/gerda.png",
+  "image": "gerda.png",
   "voiced" : "Edie McClurg",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -212,7 +209,7 @@ const frozen = {
 
 "kai": {
   "name": "Kai",
-  "image": "/uploads/kai.png",
+  "image": "kai.png",
   "voiced" : "Stephen John Anderson",
     "age": "unknown",
     "birthdate": "Unknown",
@@ -226,7 +223,7 @@ const frozen = {
 
 "oaken": {
   "name": "Mr Wandering Oaken",
-  "image": "/uploads/oaken.png",
+  "image": "oaken.png",
   "voiced" : "Chris Williams",
     "age": "",
     "birthdate": "Unknown",
@@ -240,7 +237,7 @@ const frozen = {
 
 "marshmallow": {
   "name": "Marshmallow",
-  "image": "/uploads/marshmallow.png",
+  "image": "marshmallow.png",
   "voiced" : "Paul Briggs",
     "age": "",
     "birthdate": "Unknown",
@@ -253,7 +250,7 @@ const frozen = {
 },
 "cliff": {
   "name": "Cliff",
-  "image": "/uploads/cliff.jpeg",
+  "image": "cliff.jpeg",
   "voiced" : "Lewis Cleale",
     "age": "unknown",
     "birthdate": "unknown",
@@ -283,7 +280,7 @@ const frozen = {
 
 
 
-const storage = multer.diskStorage({
+/*const storage = multer.diskStorage({
   destination: function (request, file, callback) {
     callback(null, './uploads')
   },
@@ -293,7 +290,7 @@ const storage = multer.diskStorage({
   type: function (request, file, callback) {
     callback(null, 'multipart/form-data')
   }
-})
+})*/
 
 
 app.get('/', (request, response) => {
@@ -309,7 +306,7 @@ app.get('/api/:character', (request, response) => {
    }
 })
 
-app.post('/', uploadImages.single('file'), (request, response) => {
+/*app.post('/', uploadImages.single('file'), (request, response) => {
   if(!request.file){
     console.log('No File Recieved')
     return response.send({
@@ -321,7 +318,7 @@ app.post('/', uploadImages.single('file'), (request, response) => {
       success: true,
     })
   }
-})
+})*/
 
 app.listen(process.env.PORT || PORT, ()=>{
  console.log(`listening on port ${PORT}`)

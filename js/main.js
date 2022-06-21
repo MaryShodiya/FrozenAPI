@@ -9,7 +9,7 @@ fetch(`https://frozen-animation-api.herokuapp.com/api/elsa`)
     document.querySelector('.age_one').innerText= data.age
     document.querySelector('.occupation_one').innerText= data.occupation_one
     document.querySelector('.quote_one').innerText= data.quotes
-    document.querySelector('.img_one').src = data.image
+    document.querySelector('.img_one').src = data.image 
       })
       .catch(err => {
           console.log(`error ${err}`)

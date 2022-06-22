@@ -223,7 +223,7 @@ const frozen = {
 
 "oaken": {
   "name": "Mr Wandering Oaken",
-  "image": "../images/oaken.png", 
+  "image": "/images/oaken.png", 
   "voiced" : "Chris Williams",
     "age": "",
     "birthdate": "Unknown",
@@ -237,7 +237,7 @@ const frozen = {
 
 "marshmallow": {
   "name": "Marshmallow",
-  "image": "../images/marshmallow.png",
+  "image": "/images/marshmallow.png",
   "voiced" : "Paul Briggs",
     "age": "",
     "birthdate": "Unknown",
